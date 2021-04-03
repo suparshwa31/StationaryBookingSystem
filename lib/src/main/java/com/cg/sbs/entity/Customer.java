@@ -15,7 +15,24 @@ public class Customer {
 	private String name;
 	private String email;
 	private String contactno;
-	
+	private String Dob;
+	private String address;
+
+	public String getDob() {
+		return Dob;
+	}
+
+	public void setDob(String dob) {
+		Dob = dob;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
 	public String getName() {
 		return name;

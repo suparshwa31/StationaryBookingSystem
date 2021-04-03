@@ -10,19 +10,35 @@ import javax.persistence.Table;
 @Table(name="Reviews")
 public class Review {
 	@Id
-	@Column(name="userId")
-	private String userId;
-	private String review;
-	public String getUserId() {
-		return userId;
+	@Column(name="productId")
+	private long productId;
+	private String productName;
+	private String productReview;
+	private int productRating;
+	public int getProductRating() {
+		return productRating;
 	}
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setProductRating(int productRating) {
+		this.productRating = productRating;
 	}
-	public String getReview() {
-		return review;
+	public long getProductId() {
+		return productId;
 	}
-	public void setReview(String review) {
-		this.review = review;
+	public void setProductId(long productId) {
+		this.productId = productId;
 	}
+	public String getProductName() {
+		return productName;
+	}
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+	public String getProductReview() {
+		return productReview;
+	}
+	public void setProductReview(String productReview) {
+		this.productReview = productReview;
+	}
+	
+	
 }

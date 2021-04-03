@@ -7,7 +7,7 @@ import javax.persistence.Persistence;
 
 import com.cg.sbs.entity.Products;
 
-public class Main {
+public class MainProd {
     public static void main(String[] args) {
         
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("CAP-DB");

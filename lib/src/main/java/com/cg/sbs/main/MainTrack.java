@@ -5,27 +5,24 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-import com.cg.sbs.entity.Customer;
-import com.cg.sbs.entity.Products;
+import com.cg.sbs.entity.Track;
+public class MainTrack {
 
-public class Main1 {
-    public static void main(String[] args) {
-        
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("CAP-DB");
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("CAP-DB");
         EntityManager entityManager = factory.createEntityManager();
         
         
-//        //saving product
-        Customer product = new Customer();
-        product.setUserId("usr110");
-        product.setName("MS");
-        product.setContactno("123456789");
-        product.setEmail("ms@abc.com");
-        
+//        //saving
+        Track product = new Track();
+        product.setOrderId("odr100");
+        product.setOrderStatus("In Transit");
         EntityTransaction txn = entityManager.getTransaction();
         txn.begin();
         entityManager.persist(product);
         System.out.println("Product saved");
         txn.commit();
-    }
+	}
+
 }

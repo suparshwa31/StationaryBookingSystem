@@ -1,7 +1,16 @@
 package com.cg.sbs.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Address")
 public class Address {
-	
+	@Id
+	@Column(name="orderId")
+	private String orderId;
 	private String houseno;
 	private String street;
 	private String area;
@@ -49,6 +58,21 @@ public class Address {
 	public String toString() {
 		return "Address [houseno=" + houseno + ", street=" + street + ", area=" + area + ", city=" + city + ", state="
 				+ state + ", pincode=" + pincode + "]";
+	}
+	public Address(String houseno, String street, String area, String city, String state, String pincode) {
+		super();
+		this.houseno = houseno;
+		this.street = street;
+		this.area = area;
+		this.city = city;
+		this.state = state;
+		this.pincode = pincode;
+	}
+	public String getOrderId() {
+		return orderId;
+	}
+	public void setOrderId(String orderId) {
+		this.orderId = orderId;
 	}
 	
 
